@@ -136,13 +136,17 @@ const handleSkip = (sec: number) => {
   videoStore.setTime(videoStore.time + sec);
   videoEl.value!.currentTime = time.value;
 }
+import { useRouter } from "vue-router";
+
+const router = useRouter()
 </script>
 
 <template>
-  <div v-if="!video" class="add-player">
+  <!-- <div v-if="!video" class="add-player">
     <Icon @click="pickVideo" class="video-info-conver-plus" icon="material-symbols:add-rounded"/>
-  </div>
-  <div v-if="video" class="video-wrapper" @click="videoStore.togglePlay()" @mousemove="handleControl">
+  </div> -->
+  <div  class="video-wrapper" @click="videoStore.togglePlay()" @mousemove="handleControl">
+
     <div class="video-player">
       <video
         v-on:timeupdate="setCurrentTime"
@@ -485,5 +489,12 @@ margin-bottom: -3px;
 .progress .timeline {
   width: 100%;
   height: 100%;
+}
+
+.download {
+    position: absolute;
+    left: 10px;
+    top: 100px;
+    z-index: 100000;
 }
 </style>

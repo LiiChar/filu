@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Player from "./widget/video/Player.vue";
+import { RouterView } from 'vue-router';
 import './styles/base.css'
 import './styles/ui.css'
 
@@ -7,7 +7,7 @@ import './styles/ui.css'
 </script>
 
 <template>
-    <Player/>
+ <RouterView />
 </template>
 
 <style scoped>
