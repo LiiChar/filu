@@ -10,7 +10,7 @@ This is a video player application built using Tauri and Vue. It provides a simp
 - Fullscreen mode
 - Volume control
 
-##Usage
+## Usage
 
 1. Open the application in your web browser or as a desktop application.
 2. You can either drag and drop a video file into the application or enter a video URL.
